@@ -2,7 +2,7 @@
  * @Author: ls02 <2877455773@qq.com>
  * @Date: 2022-06-22 10:46:34
  * @LastEditors: ls02 <2877455773@qq.com>
- * @LastEditTime: 2022-06-22 14:02:09
+ * @LastEditTime: 2022-06-26 18:39:37
  * @FilePath: \IdleAdventure\Attribute.hpp
  * @Description: 
  * 
@@ -31,7 +31,7 @@
  * 
  *      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  * 
- *            ·ğ×æ±£ÓÓ     ÓÀ²»å´»ú     ÓÀÎŞBUG
+ *            ä½›ç¥–ä¿ä½‘     æ°¸ä¸å®•æœº     æ°¸æ— BUG
  */
 
 #ifndef __ATTRIBUTE_HPP__
@@ -41,71 +41,70 @@
 
 namespace ls
 {
-    //ÈËÎïÊôĞÔ
+    //äººç‰©å±æ€§
     class CharacterAttributes
     {
     protected:
-        // ĞÕÃû
+        // å§“å
         std::string _name;
-        // ÑªÁ¿
+        // è¡€é‡
         long _hP;
-        // Ä§Á¦Öµ
+        // é­”åŠ›å€¼
         long _mP;
-        // ¹¥»÷Á¦
+        // æ”»å‡»åŠ›
         long _baseDamage;
-        // Ä§·¨¹¥»÷Á¦
+        // é­”æ³•æ”»å‡»åŠ›
         long _mBaseDamage;
-        // ·ÀÓùÁ¦
+        // é˜²å¾¡åŠ›
         long _defense;
-        // Ä§¿¹
+        // é­”æŠ—
         long _mDefense;
-        // ±©»÷ÂÊ
+        // æš´å‡»ç‡
         double _criticalChance;
-        //±©»÷ÉËº¦
+        //æš´å‡»ä¼¤å®³
         long _critDamage;
-        //ÃâÉË
+        //å…ä¼¤
         double _damageImmunity;
-        // ĞÒÔËÖµ
+        // å¹¸è¿å€¼
         double _luck;
-        // ÒÆ¶¯ËÙ¶È
+        // ç§»åŠ¨é€Ÿåº¦
         long _movementSpeed;
-        // ¹¥»÷ÎüÑª
+        // æ”»å‡»å¸è¡€
         double _lifeSteal;
 
-        public:
-        
+    public:
+
         /**
-         * @description: Ä¬ÈÏ¹¹Ôìº¯Êı
-         * @param {string} name Ãû×Ö
-         * @param {long} hP ÑªÁ¿
-         * @param {long} mP À¶Á¿
-         * @param {long} baseDamage ¹¥»÷Á¦
-         * @param {long} mBaseDamage Ä§·¨¹¥»÷Á¦
-         * @param {long} defense ·ÀÓùÁ¦
-         * @param {long} mDefense Ä§¿¹
-         * @param {double} criticalChance ±©»÷ÂÊ
-         * @param {long} critDamage ±©»÷ÉËº¦
-         * @param {double} damageImmunity ÃâÉË
-         * @param {double} luck ĞÒÔËÖµ
-         * @param {long} movementSpeed ÒÆ¶¯ËÙ¶È
-         * @param {double} lifeSteal ¹¥»÷ÎüÑª
-         * @return {*} ÎŞ·µ»ØÖµ
+         * @description: é»˜è®¤æ„é€ å‡½æ•°
+         * @param {string} name åå­—
+         * @param {long} hP è¡€é‡
+         * @param {long} mP è“é‡
+         * @param {long} baseDamage æ”»å‡»åŠ›
+         * @param {long} mBaseDamage é­”æ³•æ”»å‡»åŠ›
+         * @param {long} defense é˜²å¾¡åŠ›
+         * @param {long} mDefense é­”æŠ—
+         * @param {double} criticalChance æš´å‡»ç‡
+         * @param {long} critDamage æš´å‡»ä¼¤å®³
+         * @param {double} damageImmunity å…ä¼¤
+         * @param {double} luck å¹¸è¿å€¼
+         * @param {long} movementSpeed ç§»åŠ¨é€Ÿåº¦
+         * @param {double} lifeSteal æ”»å‡»å¸è¡€
+         * @return {*} æ— è¿”å›å€¼
          */
         CharacterAttributes(\
-            std::string name = "test",\
-            long hP = 100,\
-            long mP = 100,\
-            long baseDamage = 20,\
-            long mBaseDamage = 20,\
-            long defense = 20,\
-            long mDefense = 20,\
-            double criticalChance = 0.2,\
-            long critDamage = 40,\
-            double damageImmunity = 0.1,\
-            double luck = 0.001,\
-            long movementSpeed = 325,\
-            double lifeSteal = 0.05,\
-            )
+            std::string name = "test", \
+            long hP = 100, \
+            long mP = 100, \
+            long baseDamage = 20, \
+            long mBaseDamage = 20, \
+            long defense = 20, \
+            long mDefense = 20, \
+            double criticalChance = 0.2, \
+            long critDamage = 40, \
+            double damageImmunity = 0.1, \
+            double luck = 0.001, \
+            long movementSpeed = 325, \
+            double lifeSteal = 0.05)
             : _hP(hP)
             , _mP(mP)
             , _baseDamage(baseDamage)
@@ -119,254 +118,256 @@ namespace ls
             , _movementSpeed(movementSpeed)
             , _lifeSteal(lifeSteal)
         {}
-    }
 
-    /**
-     * @description: »ñÈ¡Ãû×Ö
-     * @return {string}
-     */
-    std::string GetName(void)
-    {
-        return _name;
-    }
+        /**
+        * @description: è·å–åå­—
+        * @return {string}
+        */
+        std::string GetName(void)
+        {
+            return _name;
+        }
 
-    /**
-     * @description: »ñÈ¡ÑªÁ¿
-     * @return {long} _hP
-     */
-    long GetHP(void)
-    {
-        return _hP;
-    }
+        /**
+         * @description: è·å–è¡€é‡
+         * @return {long} _hP
+         */
+        long GetHP(void)
+        {
+            return _hP;
+        }
 
-    /**
-     * @description: »ñÈ¡À¶Á¿
-     * @return {long} _mp
-     */
-    long GetMP(void)
-    {
-        return _mp;
-    }
+        /**
+         * @description: è·å–è“é‡
+         * @return {long} _mp
+         */
+        long GetMP(void)
+        {
+            return _mP;
+        }
 
-    /**
-     * @description: »ñÈ¡¹¥»÷Á¦ 
-     * @return {long} _baseDamage
-     */
-    long GetBaseDamage(void)
-    {
-        return _baseDamage;
-    }
+        /**
+         * @description: è·å–æ”»å‡»åŠ›
+         * @return {long} _baseDamage
+         */
+        long GetBaseDamage(void)
+        {
+            return _baseDamage;
+        }
 
-    /**
-     * @description:  Ä§·¨¹¥»÷Á¦
-     * @return {long} _mBaseDamage
-     */    
-    long GetMBaseDamage(void)
-    {
-        return _mBaseDamage;
-    }
+        /**
+         * @description:  é­”æ³•æ”»å‡»åŠ›
+         * @return {long} _mBaseDamage
+         */
+        long GetMBaseDamage(void)
+        {
+            return _mBaseDamage;
+        }
 
-    /**
-     * @description: »ñÈ¡·ÀÓùÁ¦
-     * @return {long} _Defense
-     */    
-    long GetDefense(void)
-    {
-        return _Defense;
-    }
+        /**
+         * @description: è·å–é˜²å¾¡åŠ›
+         * @return {long} _Defense
+         */
+        long GetDefense(void)
+        {
+            return _defense;
+        }
 
-    /**
-     * @description: »ñÈ¡Ä§¿¹
-     * @return {long} _mDefense
-     */
-    long GetMDefense(void)
-    {
-        return _mDefense;
-    }
+        /**
+         * @description: è·å–é­”æŠ—
+         * @return {long} _mDefense
+         */
+        long GetMDefense(void)
+        {
+            return _mDefense;
+        }
 
-    /**
-     * @description: ±©»÷ÂÊ
-     * @return {double} _criticalChance
-     */
-    double GetCriticalChance(void)
-    {
-        return _criticalChance;
-    }
+        /**
+         * @description: æš´å‡»ç‡
+         * @return {double} _criticalChance
+         */
+        double GetCriticalChance(void)
+        {
+            return _criticalChance;
+        }
 
-    /**
-     * @description: »ñÈ¡±©»÷ÉËº¦
-     * @return {long}  _critDamage
-     */
-    long GetCritDamage(void)
-    {
-        return _critDamage;
-    }
+        /**
+         * @description: è·å–æš´å‡»ä¼¤å®³
+         * @return {long}  _critDamage
+         */
+        long GetCritDamage(void)
+        {
+            return _critDamage;
+        }
 
-    /**
-     * @description: ÃâÉË
-     * @return {double} _damageImmunity
-     */
-    double GetDamageImmunity(void)
-    {
-        return _damageImmunity;
-    }
+        /**
+         * @description: å…ä¼¤
+         * @return {double} _damageImmunity
+         */
+        double GetDamageImmunity(void)
+        {
+            return _damageImmunity;
+        }
 
-    /**
-     * @description: »ñÈ¡ĞÒÔËÖµ
-     * @return {double} _luck
-     */
-    double GetLuck(void)
-    {
-        return _luck;
-    }
+        /**
+         * @description: è·å–å¹¸è¿å€¼
+         * @return {double} _luck
+         */
+        double GetLuck(void)
+        {
+            return _luck;
+        }
 
-    /**
-     * @description:  »ñÈ¡ÒÆ¶¯ËÙ¶È
-     * @return {long} _movementSpeed
-     */
-    long GetMovementSpeed(void)
-    {
-        return _movementSpeed;
-    }
+        /**
+         * @description:  è·å–ç§»åŠ¨é€Ÿåº¦
+         * @return {long} _movementSpeed
+         */
+        long GetMovementSpeed(void)
+        {
+            return _movementSpeed;
+        }
 
-    /**
-     * @description: »ñÈ¡¹¥»÷ÎüÑª
-     * @return {double} _lifeSteal
-     */
-    double GetLifeSteal(void)
-    {
-        return _lifeSteal;
-    }
+        /**
+         * @description: è·å–æ”»å‡»å¸è¡€
+         * @return {double} _lifeSteal
+         */
+        double GetLifeSteal(void)
+        {
+            return _lifeSteal;
+        }
 
-    /**
-     * @description: ĞŞ¸ÄÃû×Ö
-     * @param {string} name
-     * @return {*}
-     */
-    void SetName(std::string name)
-    {
-        _name = name;
-    }
+        /**
+         * @description: ä¿®æ”¹åå­—
+         * @param {string} name
+         * @return {*}
+         */
+        void SetName(std::string name)
+        {
+            _name = name;
+        }
 
-    /**
-     * @description: ÉèÖÃÑªÁ¿
-     * @param {long} hP
-     * @return {*}
-     */
-    void SetHP(long hP)
-    {
-        _hP = hP;
-    }
+        /**
+         * @description: è®¾ç½®è¡€é‡
+         * @param {long} hP
+         * @return {*}
+         */
+        void SetHP(long hP)
+        {
+            _hP = hP;
+        }
 
-    /**
-     * @description: ÉèÖÃÀ¶Á¿
-     * @param {long} mP
-     * @return {*}
-     */
-    void SetMP(long mP)
-    {
-        _mP = mP;
-    }
+        /**
+         * @description: è®¾ç½®è“é‡
+         * @param {long} mP
+         * @return {*}
+         */
+        void SetMP(long mP)
+        {
+            _mP = mP;
+        }
 
-    /**
-     * @description: ÉèÖÃ¹¥»÷Á¦
-     * @param {long} baseDamage
-     * @return {*}
-     */
-    void SetBaseDamage(long baseDamage)
-    {
-        _baseDamage = baseDamage;
-    }
+        /**
+         * @description: è®¾ç½®æ”»å‡»åŠ›
+         * @param {long} baseDamage
+         * @return {*}
+         */
+        void SetBaseDamage(long baseDamage)
+        {
+            _baseDamage = baseDamage;
+        }
 
-    /**
-     * @description: ÉèÖÃÄ§·¨¹¥»÷Á¦
-     * @param {long} mBaseDamage
-     * @return {*}
-     */
-    void SetMBaseDamage(long mBaseDamage)
-    {
-        _mBaseDamage = mBaseDamage;
-    }
+        /**
+         * @description: è®¾ç½®é­”æ³•æ”»å‡»åŠ›
+         * @param {long} mBaseDamage
+         * @return {*}
+         */
+        void SetMBaseDamage(long mBaseDamage)
+        {
+            _mBaseDamage = mBaseDamage;
+        }
 
-    /**
-     * @description: ÉèÖÃ·ÀÓùÁ¦
-     * @param {long} defense
-     * @return {*}
-     */
-    void SetDefense(long defense)
-    {
-        _defense = defense;
-    }
+        /**
+         * @description: è®¾ç½®é˜²å¾¡åŠ›
+         * @param {long} defense
+         * @return {*}
+         */
+        void SetDefense(long defense)
+        {
+            _defense = defense;
+        }
 
-    /**
-     * @description: ÉèÖÃÄ§¿¹
-     * @param {long} mDefense
-     * @return {*}
-     */
-    void SetMDefense(long mDefense)
-    {
-        _mDefense = mDefense;
-    }
+        /**
+         * @description: è®¾ç½®é­”æŠ—
+         * @param {long} mDefense
+         * @return {*}
+         */
+        void SetMDefense(long mDefense)
+        {
+            _mDefense = mDefense;
+        }
 
-    /**
-     * @description: ÉèÖÃ±©»÷ÂÊ
-     * @param {double} criticalChance
-     * @return {*}
-     */
-    void SetCriticalChance(double criticalChance)
-    {
-        _criticalChance = criticalChance;
-    }
+        /**
+         * @description: è®¾ç½®æš´å‡»ç‡
+         * @param {double} criticalChance
+         * @return {*}
+         */
+        void SetCriticalChance(double criticalChance)
+        {
+            _criticalChance = criticalChance;
+        }
 
-    /**
-     * @description: ÉèÖÃ±©»÷ÉËº¦
-     * @param {long} critDamage
-     * @return {*}
-     */
-    void SetCritDamage(long critDamage)
-    {
-        _critDamage = critDamage;
-    }
+        /**
+         * @description: è®¾ç½®æš´å‡»ä¼¤å®³
+         * @param {long} critDamage
+         * @return {*}
+         */
+        void SetCritDamage(long critDamage)
+        {
+            _critDamage = critDamage;
+        }
 
-    /**
-     * @description: ÃâÉË
-     * @param {double} damageImmunity
-     * @return {*}
-     */
-    void SetDamageImmunity(double damageImmunity)
-    {
-        _damageImmunity = damageImmunity;
-    }
+        /**
+         * @description: å…ä¼¤
+         * @param {double} damageImmunity
+         * @return {*}
+         */
+        void SetDamageImmunity(double damageImmunity)
+        {
+            _damageImmunity = damageImmunity;
+        }
 
-    /**
-     * @description: ÉèÖÃĞÒÔËÖµ
-     * @param {double} luck
-     * @return {*}
-     */
-    void SetLuck(double luck)
-    {
-        _luck = luck;
-    }
+        /**
+         * @description: è®¾ç½®å¹¸è¿å€¼
+         * @param {double} luck
+         * @return {*}
+         */
+        void SetLuck(double luck)
+        {
+            _luck = luck;
+        }
 
-    /**
-     * @description: ÉèÖÃÒÆ¶¯ËÙ¶È
-     * @param {long} movementSpeed
-     * @return {*}
-     */
-    void SetMovementSpeed(long movementSpeed)
-    {
-        _movementSpeed = movementSpeed;
-    }
+        /**
+         * @description: è®¾ç½®ç§»åŠ¨é€Ÿåº¦
+         * @param {long} movementSpeed
+         * @return {*}
+         */
+        void SetMovementSpeed(long movementSpeed)
+        {
+            _movementSpeed = movementSpeed;
+        }
 
-    /**
-     * @description: ÉèÖÃÎïÀíÎüÑª
-     * @param {double} lifeSteal
-     * @return {*}
-     */
-    void SetLifeSteal(double lifeSteal)
-    {
-        _lifeSteal = lifeSteal;
-    }
+        /**
+         * @description: è®¾ç½®ç‰©ç†å¸è¡€
+         * @param {double} lifeSteal
+         * @return {*}
+         */
+        void SetLifeSteal(double lifeSteal)
+        {
+            _lifeSteal = lifeSteal;
+        }
+    };
 }
+
+
 
 #endif
